@@ -38,7 +38,8 @@ class DrawControl extends MapControl<IDrawControlProps> {
     this.context.map.on('draw:created', (e:any) => {
       const type = e.layerType;
       const layer = e.layer;
-      console.log(e.layer.getLatLngs())
+      console.log(layer)
+      console.log(e.layer.getLatLngs && e.layer.getLatLngs())
       options.edit.featureGroup.addLayer(layer);
     })
 
